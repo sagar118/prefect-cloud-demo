@@ -1,0 +1,14 @@
+deployments:
+- # base metadata
+  name: manual-deployment
+  description: "Trigger deployment using `run` CLI command or Prefect UI"
+  
+  # flow-specific fields
+  entrypoint: prefect_demo.py:flow_hello
+  parameters:
+    name: "Sagar"
+  
+  # infra-specific fields
+  work_pool:
+    name: test-pool
+    work_queue_name: demo
