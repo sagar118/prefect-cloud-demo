@@ -1,3 +1,4 @@
 {
-  "hello-flow": "prefect_demo.py:flow_hello"
+  "hello-flow": "prefect_demo.py:flow_hello",
+  "mlflow-flow": "mlflow_demo.py:flow_hello"
 }

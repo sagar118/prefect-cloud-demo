@@ -13,7 +13,7 @@ def flow_hello():
     mlflow_run()
 
 if __name__ == "__main__":
-    mlflow.set_tracking_uri("http://localhost:5000")
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
     mlflow.set_experiment("demo")
 
     flow_hello()
