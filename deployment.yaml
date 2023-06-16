@@ -10,3 +10,14 @@ deployments:
   work_pool:
     name: test-pool
     work_queue_name: demo
+- # base metadata
+  name: mlflow-deployment
+  description: "Trigger deployment using `run` CLI command or Prefect UI"
+  
+  # flow-specific fields
+  entrypoint: mlflow_demo.py:flow_hello
+  
+  # infra-specific fields
+  work_pool:
+    name: test-pool
+    work_queue_name: mlflow-demo
