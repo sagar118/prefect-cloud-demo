@@ -8,12 +8,12 @@ def mlflow_run():
 
 @flow(name="mlflow-flow", log_prints=True)
 def flow_hello():
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
+    mlflow.set_experiment("demo")
+    
     print("Hello, I'm a Flow!")
     print("I'm about to call a Task...")
     mlflow_run()
 
 if __name__ == "__main__":
-    mlflow.set_tracking_uri("http://127.0.0.1:5000")
-    mlflow.set_experiment("demo")
-
     flow_hello()
